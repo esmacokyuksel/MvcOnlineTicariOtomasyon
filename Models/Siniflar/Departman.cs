@@ -7,15 +7,13 @@ using System.Web;
 
 namespace MvcOnlineTicariOtomasyon.Models.Siniflar
 {
-    public class Kategori
+    public class Departman
     {
         [Key]
-        public int KategoriId { get; set; }
+        public int DepartmanId { get; set; }
         [Column(TypeName = "VarChar")]
         [StringLength(30)]
-        public string KategoriAd { get; set; }
-        public ICollection<Urun> Uruns { get; set; }
-        //Her bir kategoride birden fazla urun yer alabilir demek.
-
+        public string DepartmanAd { get; set; }
+        public ICollection<Personel>Personels { get; set; }
     }
 }

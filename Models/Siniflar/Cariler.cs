@@ -7,23 +7,26 @@ using System.Web;
 
 namespace MvcOnlineTicariOtomasyon.Models.Siniflar
 {
-    public class Personel
+    public class Cariler
     {
         [Key]
-
-        //Keyi croud işlemleri için yazıyoruz
-        public int  PersonelId { get; set; }
+        public int CariId { get; set; }
         [Column(TypeName = "VarChar")]
         [StringLength(30)]
-        public string PersonelAd { get; set; }
+        public string CariAd { get; set; }
         [Column(TypeName = "VarChar")]
         [StringLength(30)]
-        public string PersonelSoyad { get; set;}
+        public string CariSoyad { get; set; }
         [Column(TypeName = "VarChar")]
-        [StringLength(250)]
-        public string PersonelGorsel { get; set; }
+        [StringLength(30)]
+        public string CariUnvan { get; set; }
+        [Column(TypeName = "VarChar")]
+        [StringLength(15)]
+        public string CariSehir { get; set; }
+        [Column(TypeName = "VarChar")]
+        [StringLength(50)]
+        public string CariMail { get; set; }
         public SatisHareket SatisHareket { get; set; }
-        public Departman Departman { get; set; }
 
     }
 }
